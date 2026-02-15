@@ -15,16 +15,22 @@
     <div class="container">
       <div class="logo-wrapper">
         <a href="/">
-          <img src="./images/logo.svg" alt="">
+          <img src="./images/logo.svg" alt="Loopstudios logo">
         </a>
       </div>
-      <nav>
+
+      <input type="checkbox" id="menu-toggle" class="visually-hidden" />
+      <label for="menu-toggle" class="burger" aria-label="Toggle navigation menu">
+        <img src="./images/icon-hamburger.svg" class="icon-open" alt="hamburger menu icon">
+        <img src="./images/icon-close.svg" class="icon-close" alt="close menu icon">
+      </label>
+      <nav class="menu">
         <ul>
-          <li>About</li>
-          <li>Careers</li>
-          <li>Events</li>
-          <li>Products</li>
-          <li>Support</li>
+          <li><a href="/">About</a></li>
+          <li><a href="/">Careers</a></li>
+          <li><a href="/">Events</a></li>
+          <li><a href="/">Products</a></li>
+          <li><a href="/">Support</a></li>
         </ul>
       </nav>
     </div>
@@ -63,42 +69,66 @@
         </div>
 
         <!-- Grid Desktop -->
-        <div class="features-grid desktop">
+        <div class="features-grid">
           <div class="feature-item">
-            <img src="./images/desktop/image-deep-earth.jpg" alt="deep earth">
+            <picture>
+              <source media="(max-width: 768px)" srcset="./images/mobile/image-deep-earth.jpg">
+              <img src="./images/desktop/image-deep-earth.jpg" alt="deep earth">
+            </picture>
             <p>Deep earth</p>
-          </div>
+          </div>          
           <div class="feature-item">
-            <img src="./images/desktop/image-night-arcade.jpg" alt="night arcade">
+            <picture>
+              <source media="(max-width: 768px)" srcset="./images/mobile/image-night-arcade.jpg">
+              <img src="./images/desktop/image-night-arcade.jpg" alt="night arcade">
+            </picture>
             <p>Night arcade</p>
           </div>
           <div class="feature-item">
-            <img src="./images/desktop/image-soccer-team.jpg" alt="soccer team VR">
+            <picture>
+              <source media="(max-width: 768px)" srcset="./images/mobile/image-soccer-team.jpg">
+              <img src="./images/desktop/image-soccer-team.jpg" alt="soccer team VR">
+            </picture>
             <p>Soccer team VR</p>
           </div>
           <div class="feature-item">
-            <img src="./images/desktop/image-grid.jpg" alt="the grid">
+            <picture>
+              <source media="(max-width: 768px)" srcset="./images/mobile/image-grid.jpg">
+              <img src="./images/desktop/image-grid.jpg" alt="the grid">
+            </picture>
             <p>The grid</p>
           </div>
           <div class="feature-item">
-            <img src="./images/desktop/image-from-above.jpg" alt="from up above VR">
+            <picture>
+              <source media="(max-width: 768px)" srcset="./images/mobile/image-from-above.jpg">
+              <img src="./images/desktop/image-from-above.jpg" alt="from up above VR">
+            </picture>
             <p>From up above VR</p>
           </div>
           <div class="feature-item">
-            <img src="./images/desktop/image-pocket-borealis.jpg" alt="pocket borealis">
+            <picture>
+              <source media="(max-width: 768px)" srcset="./images/mobile/image-pocket-borealis.jpg">
+              <img src="./images/desktop/image-pocket-borealis.jpg" alt="pocket borealis">
+            </picture>
             <p>Pocket borealis</p>
           </div>
           <div class="feature-item">
-            <img src="./images/desktop/image-curiosity.jpg" alt="the curiosity">
+            <picture>
+              <source media="(max-width: 768px)" srcset="./images/mobile/image-curiosity.jpg">
+              <img src="./images/desktop/image-curiosity.jpg" alt="the curiosity">
+            </picture>
             <p>The curiosity</p>
           </div>
           <div class="feature-item">
-            <img src="./images/desktop/image-fisheye.jpg" alt="make it fisheye">
+            <picture>
+              <source media="(max-width: 768px)" srcset="./images/mobile/image-fisheye.jpg">
+              <img src="./images/desktop/image-fisheye.jpg" alt="make it fisheye">
+            </picture>
             <p>Make it fisheye</p>
           </div>
         </div>
 
-        <!-- Grid Mobil -->
+        <!-- Grid Mobil
         <div class="features-grid mobile">
           <div class="feature-item">
             <img src="./images/mobile/image-deep-earth.jpg" alt="deep earth">
@@ -132,7 +162,7 @@
             <img src="./images/mobile/image-fisheye.jpg" alt="make it fisheye">
             <p>Make it fisheye</p>
           </div>
-        </div>
+        </div> -->
 
       </div>
     </section>
@@ -155,6 +185,7 @@
             <li>Products</li>
             <li>Support</li>
           </ul>
+        </div>
       </div>
 
       <div class="footer-right">
