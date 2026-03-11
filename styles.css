@@ -7,6 +7,7 @@
     --ff-body: 'Alta', sans-serif;
     --fw-regular: 400;
     --fw-light: 300;
+    --fw-extralight: 100;
 }
 
 /* 1. Use a more-intuitive box-sizing model */
@@ -66,9 +67,7 @@ h1, h2, h3, h4, h5, h6 {
 
 body {
     font-family: var(--ff-body);
-    color: var(--color-secondary);
-    /* background-color: var(--color-secondary); */
-    background-color: black;
+    color: var(--color-primary) !important;
 }
 
 .container {
@@ -105,7 +104,7 @@ body {
 }
 
 .burger img {
-    width: 24px;
+    width: 22px;
     height: auto;
 }
 
@@ -170,11 +169,17 @@ body:has(#menu-toggle:checked) {
     z-index: 2001;
 }
 
+.logo-img {
+    height: 100%;
+    width: auto;
+}
+
+
 .header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem 0;
+    padding: 3rem 0;
 }
 
 @media (min-width: 768px) {
@@ -198,5 +203,174 @@ body:has(#menu-toggle:checked) {
         font-family: var(--ff-body);
         text-transform: none;
     }
+
+    .menu-list a {
+        position: relative;
+    }
+
+    .menu-list a::after {
+        content: ' ';
+        position: absolute;
+        left: 30%;
+        top: 25px;
+        width: 50%;
+        height: 2px;
+        background-color: white;
+        border-radius: 2px;
+        transform: scaleX(0);
+        transition: transform 0.2s;
+        transform-origin: right;
+    }
+
+    .menu-list a:hover::after {
+        transform-origin: left;
+        transform: scaleX(1);
+    }
+
 }
 /* end header section */
+
+.hero-section {
+    background-image: url('./images/mobile/image-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+  font-family: var(--ff-heading);
+  text-transform: uppercase;
+  border: 2px solid var(--color-secondary);
+  width: 90%;
+}
+
+
+.hero-content h1 {
+
+  text-align: start;
+  font-size: 2.5rem;
+  font-weight: var(--fw-light);
+  color: var(--color-secondary);
+  line-height: 1;
+}
+
+@media (min-width: 768px) {
+    .logo-wrapper {
+        width: 300px;
+        height: auto;
+    }
+    .hero-section {
+        background-image: url('./images/desktop/image-hero.jpg');
+        height: 90vh;
+    }
+
+    .hero-section .container {
+        display: flex;
+        justify-content: flex-start;
+        
+    }
+    
+    .hero-content {
+        padding: 3rem 3rem 2rem;
+        max-width: 650px;
+        margin: 50px 0 0;
+    }
+    .hero-content h1 {
+        font-size: 4.5rem;
+        text-align: left;
+        width: 100%;
+    }
+
+    .company-info-section {
+        margin: 150px 0;
+        position: relative;
+    }
+
+    .info-container {
+        position: absolute;
+        top: 80%;
+        left: 68%;
+        transform: translate(-50%, -50%);
+        width: 600px;
+        background-color: var(--color-secondary);
+        padding: 6rem 6rem 7.7rem;
+    }
+
+    .info-container h2 {
+        font-family: var(--ff-heading);
+        text-transform: uppercase;
+        font-weight: var(--fw-light);
+        font-size: 3rem;
+        line-height: 1;
+        margin-bottom: 2.5rem;
+        color: var(--color-primary);
+    }
+
+    .info-container {
+        color: var(--color-accent);
+        font-family: var(--ff-heading);
+        font-weight: 600;
+        font-size: 14px;
+    }
+
+    .features-hidden {
+        display: none;
+    }
+
+    .desktop{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 4rem;
+    }
+
+    .desktop h3 {
+        font-family: var(--ff-heading);
+        text-transform: uppercase;
+        font-weight: var(--fw-light);
+        font-size: 2.5rem;
+        line-height: 1;
+        color: var(--color-primary);
+    }
+
+    .desktop button {
+        background: transparent;
+        border: 1px solid var(--color-primary);
+        padding: 0.5rem 2.5rem;
+        text-transform: uppercase;
+        font-family: var(--ff-heading);
+        font-weight: 600;
+        letter-spacing: 3px;
+        font-size: 14px;
+        color: var(--color-primary);
+        cursor: pointer;
+    }
+
+    .desktop button, .desktop button a {
+    transition: all 0.3s ease;
+    }
+
+    .desktop button:hover {
+        background-color: var(--color-primary);
+    }
+
+    .desktop button:hover a {
+        color: var(--color-secondary);
+    }
+
+    .desktop button a {
+        color: var(--color-primary);
+        text-decoration: none;
+        vertical-align: middle;
+    }
+
+    .features-section .features-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+        margin-bottom: 150px;
+    }
+
+}
