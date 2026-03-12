@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&family=Alta&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <title>Frontend Mentor | Loopstudios landing page</title>
 
@@ -48,7 +49,7 @@
     </section>
 
     <section class="company-info-section">
-      <div class="container">
+      <div class="container info-wrapper">
         <div class="img-container">
           <img src="./images/desktop/image-interactive.jpg" alt="man with VR headset">
         </div>
@@ -75,99 +76,64 @@
 
         <!-- Grid Desktop -->
         <div class="features-grid">
-          <div class="feature-item">
+          <div class="feature-item-container">
             <picture>
               <source media="(max-width: 768px)" srcset="./images/mobile/image-deep-earth.jpg">
-              <img src="./images/desktop/image-deep-earth.jpg" alt="deep earth">
+              <img class="gradient" src="./images/desktop/image-deep-earth.jpg" alt="deep earth">
             </picture>
-            <p>Deep earth</p>
+            <p class="feature-item-title">Deep earth</p>
           </div>          
-          <div class="feature-item">
+          <div class="feature-item-container">
             <picture>
               <source media="(max-width: 768px)" srcset="./images/mobile/image-night-arcade.jpg">
               <img src="./images/desktop/image-night-arcade.jpg" alt="night arcade">
             </picture>
-            <p>Night arcade</p>
+            <p class="feature-item-title">Night arcade</p>
           </div>
-          <div class="feature-item">
+          <div class="feature-item-container">
             <picture>
               <source media="(max-width: 768px)" srcset="./images/mobile/image-soccer-team.jpg">
               <img src="./images/desktop/image-soccer-team.jpg" alt="soccer team VR">
             </picture>
-            <p>Soccer team VR</p>
+            <p class="feature-item-title">Soccer team VR</p>
           </div>
-          <div class="feature-item">
+          <div class="feature-item-container">
             <picture>
               <source media="(max-width: 768px)" srcset="./images/mobile/image-grid.jpg">
               <img src="./images/desktop/image-grid.jpg" alt="the grid">
             </picture>
-            <p>The grid</p>
+            <p class="feature-item-title" style="max-width: 100px;">The grid</p>
           </div>
-          <div class="feature-item">
+          <div class="feature-item-container">
             <picture>
               <source media="(max-width: 768px)" srcset="./images/mobile/image-from-above.jpg">
               <img src="./images/desktop/image-from-above.jpg" alt="from up above VR">
             </picture>
-            <p>From up above VR</p>
+            <p class="feature-item-title">From up above VR</p>
           </div>
-          <div class="feature-item">
+          <div class="feature-item-container">
             <picture>
               <source media="(max-width: 768px)" srcset="./images/mobile/image-pocket-borealis.jpg">
               <img src="./images/desktop/image-pocket-borealis.jpg" alt="pocket borealis">
             </picture>
-            <p>Pocket borealis</p>
+            <p class="feature-item-title">Pocket borealis</p>
           </div>
-          <div class="feature-item">
+          <div class="feature-item-container">
             <picture>
               <source media="(max-width: 768px)" srcset="./images/mobile/image-curiosity.jpg">
               <img src="./images/desktop/image-curiosity.jpg" alt="the curiosity">
             </picture>
-            <p>The curiosity</p>
+            <p class="feature-item-title">The curiosity</p>
           </div>
-          <div class="feature-item">
+          <div class="feature-item-container">
             <picture>
               <source media="(max-width: 768px)" srcset="./images/mobile/image-fisheye.jpg">
               <img src="./images/desktop/image-fisheye.jpg" alt="make it fisheye">
             </picture>
-            <p>Make it fisheye</p>
+            <p class="feature-item-title">Make it fisheye</p>
           </div>
+          <button class="see-all-btn-mobile"><a href="#">See all</a></button>
         </div>
-
-        <!-- Grid Mobil
-        <div class="features-grid mobile">
-          <div class="feature-item">
-            <img src="./images/mobile/image-deep-earth.jpg" alt="deep earth">
-            <p>Deep earth</p>
-          </div>
-          <div class="feature-item">
-            <img src="./images/mobile/image-night-arcade.jpg" alt="night arcade">
-            <p>Night arcade</p>
-          </div>
-          <div class="feature-item">
-            <img src="./images/mobile/image-soccer-team.jpg" alt="soccer team VR">
-            <p>Soccer team VR</p>
-          </div>
-          <div class="feature-item">
-            <img src="./images/mobile/image-grid.jpg" alt="the grid">
-            <p>The grid</p>
-          </div>
-          <div class="feature-item">
-            <img src="./images/mobile/image-from-above.jpg" alt="from up above VR">
-            <p>From up above VR</p>
-          </div>
-          <div class="feature-item">
-            <img src="./images/mobile/image-pocket-borealis.jpg" alt="pocket borealis">
-            <p>Pocket borealis</p>
-          </div>
-          <div class="feature-item">
-            <img src="./images/mobile/image-curiosity.jpg" alt="the curiosity">
-            <p>The curiosity</p>
-          </div>
-          <div class="feature-item">
-            <img src="./images/mobile/image-fisheye.jpg" alt="make it fisheye">
-            <p>Make it fisheye</p>
-          </div>
-        </div> -->
 
       </div>
     </section>
@@ -179,26 +145,28 @@
       <div class="footer-left">
         <div class="footer-logo">
           <a href="/">
-            <img src="./images/logo.svg" alt="Loopstudios logo">
+            <img id="footer-logo" src="./images/logo.svg" alt="Loopstudios logo">
           </a>
         </div>
         <div class="footer-nav">
-          <ul>
-            <li>About</li>
-            <li>Careers</li>
-            <li>Events</li>
-            <li>Products</li>
-            <li>Support</li>
+          <ul class="flex-group menu-list">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Support</a></li>
           </ul>
         </div>
       </div>
 
       <div class="footer-right">
         <div class="footer-socials">
-          <a href="#"><img src="./images/icon-facebook.svg" alt="Facebook"></a>
-          <a href="#"><img src="./images/icon-twitter.svg" alt="Twitter"></a>
-          <a href="#"><img src="./images/icon-pinterest.svg" alt="Pinterest"></a>
-          <a href="#"><img src="./images/icon-instagram.svg" alt="Instagram"></a>
+          <ul class="flex-group menu-list">
+            <li><a href="#"><img src="./images/icon-facebook.svg" alt="Facebook"></a></li>
+            <li><a href="#"><img src="./images/icon-twitter.svg" alt="Twitter"></a></li>
+            <li><a href="#"><img src="./images/icon-pinterest.svg" alt="Pinterest"></a></li>
+            <li><a href="#"><img src="./images/icon-instagram.svg" alt="Instagram"></a></li>
+          </ul>
         </div>
         <p>© 2021 Loopstudios. All rights reserved.</p>
       </div>
