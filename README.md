@@ -26,7 +26,7 @@ For the fonts I used [Alata](https://fonts.google.com/specimen/Alata) and [Josef
 
 ## Building the project
 
-After looking carefully over the design and planning how I'll tackle the project, I began laying down structure of my content with HTML.
+After looking carefully over the design and planning how I'll tackle the project, I began laying down the structure of my content with HTML.
 
 Then I continued by writing the styles using CSS. Starting out with root elements, and then moving onto the actual styles - having in mind the mobile-first design for better overall construction. 
 
